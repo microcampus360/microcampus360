@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import city from "../assets/country/city.png"
 const Language = () =>{
 
-    const [on, setOn] = useState(0);
+    const [on, setOn] = useState<number>(0);
 
 
      return(
@@ -11,7 +11,7 @@ const Language = () =>{
         <>
              
             
-             <div className="relative w-full h-[100vh] overflow-hidden">
+             <div className="md:hidden relative w-full h-[100vh] overflow-hidden">
                  <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-4 gap-2">
 
                  <h1 className="text-xl font-bold text-center font-inter">SELECT LANGUAGE</h1>

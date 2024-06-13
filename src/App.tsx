@@ -7,6 +7,9 @@ import Layout from './Layout';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import OtpPage from './components/OtpPage';
+import Country from './components/country';
+import Language from './components/language';
+import Welcome from './components/welcomePage';
 
 function App() {
   return (
@@ -14,8 +17,10 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<IndexPage />} />      
           <Route path='/login' element={<LoginPage/>} />
-          <Route path='/register' element={<RegisterPage/>} />
+          <Route path='/country' element={<Country/>} />
+          <Route path='/language' element={<Language/>} />
           <Route path='/otp' element={<OtpPage/>} />
+          <Route path='/welcome' element={<Welcome/>} />
         </Route>
       </Routes>
   );

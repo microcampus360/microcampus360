@@ -9,7 +9,7 @@ module.exports = {
         'custom-gradient': 'linear-gradient(to bottom, #DEEEFF 0%, #EFFAF5 0%, #EDD7B8 68%, #FFCFAB 100%)'
       },
       boxShadow: {
-        'custom-dark': '0px 0px 5px grey', // Adjust the color and opacity as needed
+        'custom-dark': '0px 0px 5px grey',
       }
     },
   },

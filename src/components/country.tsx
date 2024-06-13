@@ -11,7 +11,7 @@ const Country = () =>{
         <>
              
             
-             <div className="relative w-full h-screen">
+             <div className="md:hidden relative w-full h-screen">
                  <div className="px-4 py-16">
 
                  <h1 className="text-xl font-bold text-center font-inter">SELECT COUNTRY</h1>
