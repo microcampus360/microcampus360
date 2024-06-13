@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../images/landing/logo (2).png"
-import top from "../images/landing/top.png"
-import down from "../images/landing/down.png"
+import logo from "../assets/landing/logo (2).png"
+import top from "../assets/landing/top.png"
+import down from "../assets/landing/down.png"
 
 
 const Landing = () =>{

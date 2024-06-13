@@ -1,6 +1,6 @@
 import React from "react";
-import ind from "../images/country/india.png"
-import city from "../images/country/city.png"
+import ind from "../assets/country/india.png"
+import city from "../assets/country/city.png"
 
 
 const Country = () =>{
