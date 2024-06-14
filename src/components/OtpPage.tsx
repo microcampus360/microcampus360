@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useForm, SubmitHandler} from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 interface FormValues{
     otp : number
@@ -9,9 +10,11 @@ const OtpPage = () => {
 
     const [timer, setTimer] = useState<number>(30);
     const [canResend, setCanResend] = useState<boolean>(false);
-
+    
     const {register, handleSubmit, formState} = useForm<FormValues>();
     const {errors} = formState;
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         let interval : NodeJS.Timeout;
@@ -39,6 +42,7 @@ const OtpPage = () => {
 
     const onSubmit : SubmitHandler<FormValues> = (data) => {
         console.log(data);
+        navigate("/country")
     }
 
   return (
