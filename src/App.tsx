@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import {Routes, Route} from 'react-router-dom'
 import IndexPage from './components/IndexPage';
@@ -7,6 +7,11 @@ import Layout from './Layout';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import OtpPage from './components/OtpPage';
+import Country from './components/country';
+import Language from './components/language';
+import Welcome from './components/welcomePage';
+import State from './components/statePage';
+import District from './components/district';
 
 function App() {
   return (
@@ -15,7 +20,12 @@ function App() {
           <Route index element={<IndexPage />} />      
           <Route path='/login' element={<LoginPage/>} />
           <Route path='/register' element={<RegisterPage/>} />
+          <Route path='/country' element={<Country/>} />
+          <Route path='/language' element={<Language/>} />
+          <Route path='/state' element={<State/>} />
+          <Route path='/district' element={<District/>} />
           <Route path='/otp' element={<OtpPage/>} />
+          <Route path='/welcome' element={<Welcome/>} />
         </Route>
       </Routes>
   );

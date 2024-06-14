@@ -17,9 +17,13 @@ const RegisterPage = () => {
     const navigate = useNavigate();
 
     const onSubmit : SubmitHandler<FormValues> = (data) => {
+
+        
         console.log(data);
         navigate('/otp');
     }
+
+    
 
   return (
     <div className='h-full'>
@@ -54,7 +58,7 @@ const RegisterPage = () => {
                     }
                 })} />
                 {errors.password && <p className='text-red-500 w-full mb-1 mx-5'>{errors.password.message}</p>}
-                <button className='bg-[#006D4A] text-white py-3 px-2 mx-16 my-5 rounded-xl'>Register</button>
+                <button  className='bg-[#006D4A] text-white py-3 px-2 mx-16 my-5 rounded-xl'>Register</button>
             </form>
         </div>
     </div>
