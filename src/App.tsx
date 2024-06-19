@@ -12,6 +12,7 @@ import Language from './components/language';
 import Welcome from './components/welcomePage';
 import State from './components/statePage';
 import District from './components/district';
+import Home from './components/home';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/district' element={<District/>} />
           <Route path='/otp' element={<OtpPage/>} />
           <Route path='/welcome' element={<Welcome/>} />
+          <Route path='/home' element={<Home/>} />
         </Route>
       </Routes>
   );
