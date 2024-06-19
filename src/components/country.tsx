@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ind from "../assets/country/india.png"
 import city from "../assets/country/city.png"
 import { useNavigate } from 'react-router-dom'
+import { useUserContext } from "../contexts/UserContext";
 
 const Country = () =>{
 
      const [on, setOn] = useState<number>(0);
      const navigate = useNavigate();
+     const {setCountry} = useUserContext();
 
      return(
 
@@ -19,7 +21,10 @@ const Country = () =>{
                  <h1 className="text-xl font-bold text-center font-inter">SELECT COUNTRY</h1>
                  <div className="w-full flex justify-start mt-16 ">
                        
-                       <button onClick={()=>{setOn(1)}} className="shadow-custom-dark rounded-lg py-6 focus:border border-red-500 "><img src={ind}></img></button>
+                       <button onClick={()=>{
+                        setOn(1)
+                        setCountry("India");
+                        }} className="shadow-custom-dark rounded-lg py-6 focus:border border-red-500 "><img src={ind}></img></button>
                  </div>
 
                  </div>

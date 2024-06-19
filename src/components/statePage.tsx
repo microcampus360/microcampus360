@@ -9,6 +9,12 @@ import telangana from "../assets/state/telangana.png"
 import maha from "../assets/state/maha.png"
 import karnatak from "../assets/state/karnataka.png"
 import tamil  from "../assets/state/tamil.png"
+import { useUserContext } from '../contexts/UserContext';
+
+interface State{
+   name : string,
+   image : string
+}
 
 const State = () =>{
 
@@ -16,8 +22,16 @@ const State = () =>{
 
     const [on, setOn] = useState<number>(0);
     const navigate = useNavigate();
+    const {setState} = useUserContext();
 
-    const states : StateImage[] = [kerala,andhra,telangana,maha,karnatak,tamil]
+    const states: State[] = [
+      { name: 'Kerala', image: kerala },
+      { name: 'Andhra Pradesh', image: andhra },
+      { name: 'Telangana', image: telangana },
+      { name: 'Maharashtra', image: maha },
+      { name: 'Karnataka', image: karnatak },
+      { name: 'Tamil Nadu', image: tamil },
+    ];
 
      return(
 
@@ -31,10 +45,12 @@ const State = () =>{
                  <h1 className="text-xl font-bold text-center font-inter">SELECT STATE</h1>
                  <div className="w-full ml-4 justify-center mt-4 grid grid-cols-2 gap-8 ">
                   {
-                     states.map((item:string) =>(
+                     states.map((item:State) =>(
 
                        
-                           <button  onClick={()=>{setOn(1)}} className="rounded-lg  w-40 h-40 flex items-center justify-center relative focus:border-2 border-red-500 "><img className='w-36 h-36' src={item}></img></button>
+                           <button  onClick={()=>{setOn(1)
+                              setState(item.name);
+                           }} className="rounded-lg  w-40 h-40 flex items-center justify-center relative focus:border-2 border-red-500 "><img className='w-36 h-36' src={item.image}></img></button>
                        
 
                      ))
