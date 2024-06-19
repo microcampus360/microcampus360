@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bwCopperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color: #333333; stop-opacity: 1" />
+      <stop offset="50%" style="stop-color: #666666; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #999999; stop-opacity: 1" />
+    </linearGradient>
+    <filter id="noise" x="0" y="0">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" result="noise" />
+      <feDiffuseLighting in="noise" lighting-color="#ffffff" surfaceScale="1">
+        <feDistantLight azimuth="45" elevation="55" />
+      </feDiffuseLighting>
+    </filter>
+  </defs>
+  <rect width="200" height="200" fill="url(#bwCopperGradient)" />
+  <rect width="200" height="200" fill="none" filter="url(#noise)" />
+</svg>
