@@ -1,17 +1,20 @@
-import logo from "../assets/recyclick.svg"
-import loc from "../assets/district/Location.png"
+import logo from "../../assets/recyclick.svg"
+import loc from "../../assets/district/Location.png"
 import { useNavigate } from 'react-router-dom'
 
-import paper from "../assets/homepage/32 (1).png"
-import plastic from "../assets/homepage/36.png"
-import metals from "../assets/homepage/37.png"
-import motor from "../assets/homepage/38.png"
-import ewaste from "../assets/homepage/33 (1).png"
-import twofour from "../assets/homepage/39.png"
-import others from "../assets/homepage/34 (1).png"
-import sewage from "../assets/homepage/40.png"
-import solid from "../assets/homepage/35.png"
+
+
+import paper from "../../assets/homepage/32 (1).png"
+import plastic from "../../assets/homepage/36.png"
+import metals from "../../assets/homepage/37.png"
+import motor from "../../assets/homepage/38.png"
+import ewaste from "../../assets/homepage/33 (1).png"
+import twofour from "../../assets/homepage/39.png"
+import others from "../../assets/homepage/34 (1).png"
+import sewage from "../../assets/homepage/40.png"
+import solid from "../../assets/homepage/35.png"
 import { useState } from "react"
+
 import { isVisible } from "@testing-library/user-event/dist/utils"
 
 const Home = () =>{
@@ -64,21 +67,13 @@ const Home = () =>{
       };
 
     return (
-        <>
+        
+        <div className="h-[80vh] overflow-scroll mb-4">
+
+        
            
            <div className="w-full flex items-center justify-center flex-col gap-2">
-            <div className="top-nav mt-4 p-4  w-full flex items-center justify-center">
-
-                <img className="w-20 w-20 ml-2" src={logo}></img> 
-                <div   className="w-full flex justify-end">
-                    <div className=" mr-2 w-40 flex items-center justify-center gap-4 rounded-lg relative  bg-red-800 p-2  font-bold text-white focus:bg-red-900 ">
-                        <img className='' src={loc}>
-                        </img>
-                        Ernakulum
-                    </div>
-                   
-                </div>
-            </div>
+         
             <div className="w-full">
 
             <div className="w-full bg-[#BADC14] p-4 flex items-center justify-center">
@@ -193,8 +188,8 @@ const Home = () =>{
 
            </div>
            
-         
-        </>
+           </div>
+        
     )
 }
 

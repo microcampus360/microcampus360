@@ -12,24 +12,27 @@ import Language from './components/language';
 import Welcome from './components/welcomePage';
 import State from './components/statePage';
 import District from './components/district';
-import Home from './components/home';
+import Dashboard from './components/Dashboard/Dashboard';
+import { UserContextProvider } from './contexts/UserContext';
 
 function App() {
   return (
-    <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<IndexPage />} />      
-          <Route path='/login' element={<LoginPage/>} />
-          <Route path='/register' element={<RegisterPage/>} />
-          <Route path='/country' element={<Country/>} />
-          <Route path='/language' element={<Language/>} />
-          <Route path='/state' element={<State/>} />
-          <Route path='/district' element={<District/>} />
-          <Route path='/otp' element={<OtpPage/>} />
-          <Route path='/welcome' element={<Welcome/>} />
-          <Route path='/home' element={<Home/>} />
-        </Route>
-      </Routes>
+    <UserContextProvider>
+      <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<IndexPage />} />      
+            <Route path='/login' element={<LoginPage/>} />
+            <Route path='/register' element={<RegisterPage/>} />
+            <Route path='/country' element={<Country/>} />
+            <Route path='/language' element={<Language/>} />
+            <Route path='/state' element={<State/>} />
+            <Route path='/district' element={<District/>} />
+            <Route path='/otp' element={<OtpPage/>} />
+            <Route path='/welcome' element={<Welcome/>} />
+            <Route path='/dashboard/:subpage?' element={<Dashboard />} />
+          </Route>
+        </Routes>
+    </UserContextProvider>
   );
 }
 

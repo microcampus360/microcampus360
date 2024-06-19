@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import city from "../assets/country/city.png"
 import left from "../assets/welcome/round-left.png"
+import { useUserContext } from '../contexts/UserContext';
 const Language = () =>{
 
    type StateImage = string;
 
     const [on, setOn] = useState<number>(0);
     const navigate = useNavigate();
+    const {setLanguage} = useUserContext();
      
     interface Language {
       lang: string;
@@ -36,7 +38,9 @@ const Language = () =>{
                         
                         {
                            languages.map((item:Language)=>(
-                              <button  onClick={()=>{setOn(1)}} style={{ backgroundColor : item.color }} className={`rounded-lg shadow-custom-dark  w-36 h-36 relative focus:border border-red-500 `}><span className="absolute  top-0 left-0 text-sm m-2 font-bold">{item.lang}</span> <span className="text-3xl font-bold">{item.sub}</span></button>
+                              <button  onClick={()=>{setOn(1)
+                                 setLanguage(item.lang);
+                              }} className={`rounded-lg shadow-custom-dark bg-[${item.color}] w-36 h-36 relative focus:border border-red-500 `}><span className="absolute  top-0 left-0 text-sm m-2 font-bold">{item.lang}</span> <span className="text-3xl font-bold">{item.sub}</span></button>
 
                            ))
                         }
