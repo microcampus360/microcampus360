@@ -12,7 +12,7 @@ const Header = () => {
       <div className='flex justify-between items-center px-5'>
         <img src={logo} className='w-24 h-24' alt="logo" />
         <div className="h-fit rounded-lg bg-red-600 px-4 py-2 font-bold text-white focus:bg-red-900 flex gap-2">
-          <img src={loc}></img>
+          <img src={loc} alt='location'></img>
           <span>{district}</span>
         </div>
       </div>

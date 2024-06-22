@@ -1,6 +1,6 @@
 import React from 'react'
 import {useForm, SubmitHandler} from 'react-hook-form'
-import truck from '../assets/RegisterPage/truck.svg'
+import truck from '../../assets/RegisterPage/truck.svg'
 import { useNavigate } from 'react-router-dom'
 
 interface FormValues {
