@@ -1,5 +1,5 @@
 import React from 'react'
-import login from '../assets/LoginPage/login.svg'
+import login from '../../assets/LoginPage/login.svg'
 import {SubmitHandler, useForm} from 'react-hook-form'
 
 interface FormValues {
