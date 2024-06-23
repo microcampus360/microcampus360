@@ -40,7 +40,7 @@ const Language = () =>{
                            languages.map((item:Language)=>(
                               <button  onClick={()=>{setOn(1)
                                  setLanguage(item.lang);
-                              }} className={`rounded-lg shadow-custom-dark bg-[${item.color}] w-36 h-36 relative focus:border border-red-500 `}><span className="absolute  top-0 left-0 text-sm m-2 font-bold">{item.lang}</span> <span className="text-3xl font-bold">{item.sub}</span></button>
+                              }} style={{ backgroundColor : item.color }}  className={`rounded-lg shadow-custom-dark  w-36 h-36 relative focus:border border-red-500 `}><span className="absolute  top-0 left-0 text-sm m-2 font-bold">{item.lang}</span> <span className="text-3xl font-bold">{item.sub}</span></button>
 
                            ))
                         }

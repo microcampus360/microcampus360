@@ -510,7 +510,7 @@ const PriceList = () => {
   }
   
   return (
-    <div>
+    <div className="h-[80vh] overflow-scroll">
       <div className='my-28'>
         <div className='my-5'>
           <h2 className='text-2xl font-bold mx-5 my-4'>PAPER</h2>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import DashboardNav from './DashboardNav';
 
@@ -8,6 +8,10 @@ import MarketPlace from './MarketPlace';
 import Profile from './Profile';
 import Header from './Header';
 import Home from './Home';
+import UpdatedCountry from './updatedCountry';
+import UpdatedLanguage from './updatedLanguage';
+import UpdatedDistrict from './updatedDistrict';
+import UpdatedState from './updatedState';
 
 
 interface RouteParams{
@@ -18,7 +22,11 @@ interface RouteParams{
 const Dashboard: React.FC = () => {
   const {subpage} = useParams<RouteParams>();
 
-  console.log(subpage);
+  
+
+  useEffect(()=>{
+    console.log("fdsfdfsf",subpage);
+  },[])
 
   return (
     <>
@@ -37,6 +45,18 @@ const Dashboard: React.FC = () => {
       }
       {
         subpage === 'profile' && (<Profile/>)
+      }
+      {
+        subpage === 'updateCountry' && (<UpdatedCountry/>)
+      }
+      {
+        subpage === 'updateLanguage' && (<UpdatedLanguage/>)
+      }
+      {
+        subpage === 'updateDistrict' && (<UpdatedDistrict/>)
+      }
+       {
+        subpage === 'updateState' && (<UpdatedState/>)
       }
       <DashboardNav subpage={subpage ?? ''} />
     </>
