@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import DashboardNav from './DashboardNav';
-import Home from './Home';
-import PriceList from './PriceList';
+
+import PriceList from "./PriceList"
 import BWG from './BWG';
 import MarketPlace from './MarketPlace';
 import Profile from './Profile';
 import Header from './Header';
+import Home from './Home';
+
 
 
 interface RouteParams{
@@ -37,6 +39,7 @@ const Dashboard: React.FC = () => {
       {
         subpage === 'profile' && (<Profile/>)
       }
+     
       <DashboardNav subpage={subpage ?? ''} />
     </>
   );

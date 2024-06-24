@@ -12,16 +12,19 @@ import Language from './components/language';
 import Welcome from './components/welcomePage';
 import State from './components/statePage';
 import District from './components/district';
-import Dashboard from './components/dashboard/Dashboard';
+import Dashboard from "./components/Dashboard/Dashboard";
+
 import { UserContextProvider } from './contexts/UserContext';
-import Index from './components/dashboard/profilepages/Index';
+import Index from './components/Dashboard/profilepages/Index';
+
 
 function App() {
   return (
     <UserContextProvider>
       <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<IndexPage />} />      
+            <Route index element={<Welcome/>} /> 
+            <Route path='/home' element={<IndexPage/>} />     
             <Route path='/login' element={<LoginPage/>} />
             <Route path='/register' element={<RegisterPage/>} />
             <Route path='/country' element={<Country/>} />

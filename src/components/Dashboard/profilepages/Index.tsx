@@ -5,6 +5,11 @@ import BioWasteHistory from './BioWasteHistory';
 import QRCodePage from './QRCodePage';
 import ProfileUpdate from './ProfileUpdate';
 import BackArrow from '../../../assets/ProfilePage/BackArrow.svg'
+
+import UpdatedCountry from './updatedCountry';
+import UpdatedLanguage from './updatedLanguage';
+import UpdatedDistrict from './updatedDistrict';
+import UpdatedState from './updatedState';
  
 const Index = () => {
 
@@ -58,6 +63,18 @@ const Index = () => {
             <ProfileUpdate />
           )
         }
+         {
+        action === 'country' && (<UpdatedCountry/>)
+      }
+      {
+        action === 'language' && (<UpdatedLanguage/>)
+      }
+      {
+        action === 'district' && (<UpdatedDistrict/>)
+      }
+       {
+        action === 'state' && (<UpdatedState/>)
+      }
       </div>
     </>
   )

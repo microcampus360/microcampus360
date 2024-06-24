@@ -42,7 +42,7 @@ const OtpPage = () => {
 
     const onSubmit : SubmitHandler<FormValues> = (data) => {
         console.log(data);
-        navigate("/country")
+        navigate("/login")
     }
 
   return (

@@ -20,12 +20,12 @@ const Profile = () => {
     {
       name: 'Change Country',
       image: ChangeCountry,
-      redirect: '/country'
+      redirect: 'country'
     },
     {
       name: 'Language',
       image: Language,
-      redirect: '/language'
+      redirect: 'language'
     },
     {
       name: 'Scrap Order History',
