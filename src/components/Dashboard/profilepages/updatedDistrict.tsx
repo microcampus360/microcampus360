@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-import city from "../../assets/country/city.png"
-import left from "../../assets/welcome/round-left.png"
-import loc from "../../assets/district/Location.png"
-import { useUserContext } from '../../contexts/UserContext';
+import city from "../../../assets/country/city.png"
+import left from "../../../assets/welcome/round-left.png"
+import loc from "../../../assets/district/Location.png"
+import { useUserContext } from "../../../contexts/UserContext"
 import ClipLoader from "react-spinners/ClipLoader";
 
 const UpdatedDistrict = () => {

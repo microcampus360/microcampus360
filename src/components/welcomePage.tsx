@@ -49,7 +49,7 @@ const Welcome = () =>{
             <div className="md:hidden overflowx-hidden ">
 
                 <div className="relative flex items-center justify-center w-full ">
-                <button onClick={()=>{navigate("/district")}}>   <img className="absolute top-0 left-0 m-4" src={left}></img> </button>
+               
                   
                     <div className="mt-10 flex items-center justify-center flex-col gap-4">
                         <h2 className="text-sm text-gray-500 font-semibold">Welcome to</h2>
@@ -112,10 +112,15 @@ const Welcome = () =>{
     <button onClick={handleNext} className="bg-gray-800 px-6 py-2 text-white font-semibold rounded-lg z-10">Next</button>
   </>
   :
-
+ 
   <>
   <button onClick={handlePrev}  className="bg-gray-800 px-6 py-2 text-white font-semibold rounded-lg z-10 mr-4">Previous</button>
-  <button onClick={handleNext}  className="bg-gray-800 px-6 py-2 text-white font-semibold rounded-lg z-10">Next</button>
+  {
+     page === 2?
+  <button onClick={()=>{navigate("/home")}}  className="bg-gray-800 px-6 py-2 text-white font-semibold rounded-lg z-10">Next</button>
+   :
+   <button onClick={handleNext} className="bg-gray-800 px-6 py-2 text-white font-semibold rounded-lg z-10">Next</button>
+    }
   </>
  
 }

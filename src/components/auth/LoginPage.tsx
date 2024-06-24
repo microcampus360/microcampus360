@@ -1,7 +1,7 @@
 import React from 'react'
-import login from '../assets/LoginPage/login.svg'
+import login from '../../assets/LoginPage/login.svg'
 import {SubmitHandler, useForm} from 'react-hook-form'
-
+import { useNavigate } from 'react-router-dom'
 interface FormValues {
     email : string;
     password : string;
@@ -11,9 +11,11 @@ const LoginPage = () => {
 
     const {register, handleSubmit, formState} = useForm<FormValues>();
     const {errors} = formState;
-
+    const navigate = useNavigate();
+ 
     const onSubmit : SubmitHandler<FormValues> = (data) => {
         console.log(data);
+        navigate("/dashboard")
     }
 
   return (
@@ -40,7 +42,7 @@ const LoginPage = () => {
                     }
                 })} />
                 {errors.password && <p className='text-red-500 w-full mb-1 mx-5'>{errors.password.message}</p>}
-                <button className='bg-[#006D4A] text-white py-3 px-2 mx-16 my-5 rounded-xl'>Login</button>
+                <button  className='bg-[#006D4A] text-white py-3 px-2 mx-16 my-5 rounded-xl'>Login</button>
             </form>
         </div>
     </div>

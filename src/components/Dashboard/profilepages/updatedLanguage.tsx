@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import ind from "../../assets/country/india.png"
-import city from "../../assets/country/city.png"
+import ind from "../../../assets/country/india.png"
+import city from "../../../assets/country/city.png"
 import { useNavigate } from 'react-router-dom'
-import { useUserContext } from "../../contexts/UserContext"
+import { useUserContext } from "../../../contexts/UserContext"
 import ClipLoader from "react-spinners/ClipLoader";
 
 const UpdatedLanguage = () =>{
@@ -41,9 +41,9 @@ const UpdatedLanguage = () =>{
       return(
  
          <>
-              <div className="h-[80vh] overflow-scroll mb-4">
              
-              <div className="md:hidden relative w-full h-[100vh] overflow-hidden">
+             
+              <div className="md:hidden relative w-full h-full overflow-hidden">
                   <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-4 gap-2">
                  
                   <h1 className="text-xl font-bold text-center font-inter">CHANGE LANGUAGE</h1>
@@ -102,7 +102,7 @@ const UpdatedLanguage = () =>{
                  
  
               </div>
-              </div>
+              
           
          </>
  

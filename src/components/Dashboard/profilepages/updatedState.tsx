@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-import city from "../../assets/country/city.png"
-import left from "../../assets/welcome/round-left.png"
+import city from "../../../assets/country/city.png"
 
-import kerala from "../../assets/state/kerala.png"
-import andhra from "../../assets/state/andhra.png"
-import telangana from "../../assets/state/telangana.png"
-import maha from "../../assets/state/maha.png"
-import karnatak from "../../assets/state/karnataka.png"
-import tamil  from "../../assets/state/tamil.png"
-import { useUserContext } from '../../contexts/UserContext';
+
+import kerala from "../../../assets/state/kerala.png"
+import andhra from "../../../assets/state/andhra.png"
+import telangana from "../../../assets/state/telangana.png"
+import maha from "../../../assets/state/maha.png"
+import karnatak from "../../../assets/state/karnataka.png"
+import tamil  from "../../../assets/state/tamil.png"
+import { useUserContext } from "../../../contexts/UserContext"
 import ClipLoader from "react-spinners/ClipLoader";
 
 interface State{

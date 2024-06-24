@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import ind from "../../assets/country/india.png"
-import city from "../../assets/country/city.png"
+import ind from "../../../assets/country/india.png"
+import city from "../../../assets/country/city.png"
 import { useNavigate } from 'react-router-dom'
-import { useUserContext } from "../../contexts/UserContext"
+import { useUserContext } from "../../../contexts/UserContext"
 import ClipLoader from "react-spinners/ClipLoader";
 
 const UpdatedCountry = () =>{
@@ -25,9 +25,9 @@ const UpdatedCountry = () =>{
      return(
 
         <>
-               <div className="h-[80vh] overflow-scroll mb-4">
+             
             
-             <div className="md:hidden relative w-full  h-screen">
+             <div className="md:hidden  relative w-full h-full">
                  <div className="px-4 py-16">
 
                  <h1 className="text-xl font-bold text-center font-inter">CHANGE COUNTRY</h1>
@@ -75,7 +75,7 @@ const UpdatedCountry = () =>{
                  <img className="absolute bottom-0 right-0" src={city}></img>
 
              </div>
-             </div>
+             
          
         </>
 
