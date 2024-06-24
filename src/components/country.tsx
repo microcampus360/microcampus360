@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import ind from "../assets/country/india.png"
 import city from "../assets/country/city.png"
 import { useNavigate } from 'react-router-dom'
@@ -24,7 +24,7 @@ const Country = () =>{
                        <button onClick={()=>{
                         setOn(1)
                         setCountry("India");
-                        }} className="shadow-custom-dark rounded-lg py-6 focus:border border-red-500 "><img src={ind}></img></button>
+                        }} className="shadow-custom-dark rounded-lg py-6 focus:border border-red-500 "><img src={ind} alt="country"></img></button>
                  </div>
 
                  </div>
@@ -40,8 +40,8 @@ const Country = () =>{
                  }
                  </div>
                  
-                 <img className="absolute bottom-0 left-0 transform scale-x-[-1]" src={city}></img>
-                 <img className="absolute bottom-0 right-0" src={city}></img>
+                 <img className="absolute bottom-0 left-0 transform scale-x-[-1]" src={city} alt="city"></img>
+                 <img className="absolute bottom-0 right-0" src={city} alt="city"></img>
 
              </div>
          

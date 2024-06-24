@@ -15,10 +15,10 @@ const MarketPlace = () => {
 </div>
 <div className='w-full flex items-center justify-center flex-col gap-6 mt-10'>
 
-<img src={global}></img>
-<h2 className='font-bold'>GLOBAL RECYCLING MARKET 
+<img src={global} alt='global'></img>
+<h2 className='font-bold text-xl'>GLOBAL RECYCLING MARKET 
 PLACE</h2>
-<h3 className='text-sm text-center'>It is an Online Marketplace where buyers and sellers can network and trade with the livestock. We connect suitable business streams using modern digital technology, maximise the value of the scrap and find the best potential players for every type of waste. This will optimise companies' material flow, making companies production more efficient, cost-effective and environmentally friendly.</h3>
+<h3 className='text-lg text-center'>It is an Online Marketplace where buyers and sellers can network and trade with the livestock. We connect suitable business streams using modern digital technology, maximise the value of the scrap and find the best potential players for every type of waste. This will optimise companies' material flow, making companies production more efficient, cost-effective and environmentally friendly.</h3>
 
 </div>
 

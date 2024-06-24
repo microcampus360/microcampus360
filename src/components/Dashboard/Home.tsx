@@ -1,9 +1,3 @@
-import logo from "../../assets/recyclick.svg"
-import loc from "../../assets/district/Location.png"
-import { useNavigate } from 'react-router-dom'
-
-
-
 import paper from "../../assets/homepage/32 (1).png"
 import plastic from "../../assets/homepage/36.png"
 import metals from "../../assets/homepage/37.png"
@@ -15,13 +9,9 @@ import sewage from "../../assets/homepage/40.png"
 import solid from "../../assets/homepage/35.png"
 import { useState } from "react"
 
-import { isVisible } from "@testing-library/user-event/dist/utils"
-
 const Home = () =>{
 
     type ChoiceImage = string;
-
-    const navigate = useNavigate();
 
     const choices : ChoiceImage[] = [paper,plastic,metals,motor,ewaste,twofour,others]
     const solidSewage : ChoiceImage[] = [solid,sewage]
@@ -33,7 +23,7 @@ const Home = () =>{
     const toggleCheckbox = (index: number) => {
         let vis = [...isVisible];
          
-        vis = vis.map((choice,idx) => ( choice  === true && idx!=index ? false : choice))
+        vis = vis.map((choice,idx) => ( choice  === true && idx !== index ? false : choice))
 
         let solidSew = [...isVisible];
          
@@ -55,7 +45,7 @@ const Home = () =>{
        
         let vis = [...solidSewageVisible];
          
-        vis = vis.map((choice,idx) => ( choice  === true && idx!=index ? false : choice))
+        vis = vis.map((choice,idx) => ( choice  === true && idx !== index ? false : choice))
         
         if(vis[index] === false)setDis(false)
         else
@@ -68,7 +58,7 @@ const Home = () =>{
 
     return (
         
-        <div className="h-[80vh] overflow-scroll mb-4">
+        <div className="h-fit overflow-scroll mb-20 text-xl">
 
         
            
@@ -87,13 +77,13 @@ const Home = () =>{
                     <div className="p-8 flex items-center justify-center flex-col gap-2">
                         <div className="text-left ml-10">
 
-                        <h2 className="text-sm font-bold">BIO-MEDICAL WASTE</h2>
-                        <h2 className="text-xs text-gray-500">Adult Diaper, Domestic Bio Disposables, Kids Diaper, Sanitary Pads</h2>
+                        <h2 className="font-bold">BIO-MEDICAL WASTE</h2>
+                        <h2 className=" text-base text-gray-500">Adult Diaper, Domestic Bio Disposables, Kids Diaper, Sanitary Pads</h2>
 
                         </div>
                          
                       
-                       <button className="p-4 rounded-full bg-[#BADC14] font-bold mt-4" >RAISE BIO-MEDICAL PICKUP</button>
+                       <button className="text-lg p-4 rounded-full bg-[#BADC14] font-bold mt-4" >RAISE BIO-MEDICAL PICKUP</button>
 
                     </div>
                    
@@ -114,7 +104,7 @@ const Home = () =>{
 
             <div className="w-full p-4 flex items-center justify-center">
 
-                <h2 className=" text-xs ">
+                <h2 className="">
                 <span className="font-semibold">NOTE: </span>Green Category indicates (+ Bill) where customers are paid by AAKRI team, and Yellow Category indicates (-Bill), wher where customer have to pay to AAKRI for disposing. Final Bill will be settled after weighing of both Plus/Minus Bill. (For Corporate/Bulk orders please contact Toll Free)
                 </h2>
 
@@ -125,7 +115,7 @@ const Home = () =>{
                         choices.map((choice : string,idx : number)=>(
 
                             <button onClick={()=>{toggleCheckbox(idx)}} className="relative">
-                                <img src={choice}></img>
+                                <img src={choice} className="w-48 h-36" alt="choice"></img>
                                 {
                                     isVisible[idx] && (
                                         <input
@@ -147,7 +137,7 @@ const Home = () =>{
 
             <div className="w-full p-4 flex items-center justify-center">
 
-                <h2 className=" text-xs ">
+                <h2 className="">
                   Pay us to manage a clean environment, we are committed to help you clear your solid/wet waste. Please schedule your booking and rest will be taken care of. Just a Pay away.
                 </h2>
 
@@ -159,12 +149,12 @@ const Home = () =>{
                         solidSewage.map((choice : string,idx : number)=>(
 
                             <button onClick={()=>{toggleSolidSewage(idx)}} className="relative">
-                                <img src={choice}></img>
+                                <img src={choice} className="w-48 h-36" alt="choice"></img>
                                 {
                                     solidSewageVisible[idx] && (
                                         <input
                                           type="checkbox"
-                                          className="absolute top-0 right-0 m-2 "
+                                          className="absolute top-0 right-0 m-2"
                                           checked={solidSewageVisible[idx]}
                                           readOnly
                                         />

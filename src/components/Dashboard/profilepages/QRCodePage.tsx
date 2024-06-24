@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Index from './Index'
 import  QRCode  from 'qrcode.react'
 import { Link } from 'react-router-dom';
 

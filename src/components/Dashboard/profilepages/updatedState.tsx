@@ -19,8 +19,6 @@ interface State{
 
 const UpdatedState = () =>{
 
-    type StateImage = string;
-
    const [load, setLoad] = useState<number>(0);
 
 
@@ -54,7 +52,7 @@ const UpdatedState = () =>{
               <div className="h-[80vh] overflow-scroll mb-4">
             
              <div className="md:hidden relative w-full h-[100vh] overflow-hidden">
-                 <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-4 gap-2">
+                 <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-2">
                  
                  
                  <h1 className="text-xl font-bold text-center font-inter">SELECT STATE</h1>
@@ -65,7 +63,7 @@ const UpdatedState = () =>{
                        
                            <button  onClick={()=>{setOn(1)
                               setState(item.name);
-                           }} className="rounded-lg  w-40 h-40 flex items-center justify-center relative focus:border-2 border-red-500 "><img className='w-36 h-36' src={item.image}></img></button>
+                           }} className="rounded-lg  w-40 h-40 flex items-center justify-center relative focus:border-2 border-red-500 "><img className='w-36 h-36' src={item.image} alt='state'></img></button>
                        
 
                      ))
@@ -104,8 +102,8 @@ const UpdatedState = () =>{
 
                  </div>
                  <div className="flex absolute bottom-0">
-                    <img className="transform scale-x-[-1]" src={city}></img>
-                    <img className="" src={city}></img>
+                    <img className="transform scale-x-[-1]" src={city} alt='city'></img>
+                    <img className="" src={city} alt='city'></img>
                 </div>
 
                
