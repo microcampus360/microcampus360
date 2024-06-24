@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import city from "../../../assets/country/city.png"
-import left from "../../../assets/welcome/round-left.png"
 import loc from "../../../assets/district/Location.png"
 import { useUserContext } from "../../../contexts/UserContext"
 import ClipLoader from "react-spinners/ClipLoader";
@@ -33,7 +32,7 @@ const UpdatedDistrict = () => {
       <div className="h-[80vh] overflow-scroll mb-4">
 
          <div className="md:hidden relative w-full h-[100vh] overflow-hidden">
-            <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-4 gap-2">
+            <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-2">
               
 
                <h1 className="text-xl font-bold text-center font-inter">CHANGE DISTRICT</h1>
@@ -47,7 +46,7 @@ const UpdatedDistrict = () => {
                            setDistrict(item);
                         }
 
-                        } className="rounded-lg relative   bg-red-600 px-6 py-2 font-bold text-white focus:bg-red-900 "><img className='absolute left-0 ml-2' src={loc}></img>{item}</button>
+                        } className="rounded-lg relative   bg-red-600 px-6 py-2 font-bold text-white focus:bg-red-900 "><img className='absolute left-0 ml-2' src={loc} alt='location'></img>{item}</button>
 
 
                      ))
@@ -85,8 +84,8 @@ const UpdatedDistrict = () => {
 
             </div>
             <div className="flex absolute bottom-0">
-               <img className="transform scale-x-[-1]" src={city}></img>
-               <img className="" src={city}></img>
+               <img className="transform scale-x-[-1]" src={city} alt='city'></img>
+               <img className="" src={city} alt='city'></img>
             </div>
 
 

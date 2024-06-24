@@ -5,8 +5,6 @@ import left from "../assets/welcome/round-left.png"
 import { useUserContext } from '../contexts/UserContext';
 const Language = () =>{
 
-   type StateImage = string;
-
     const [on, setOn] = useState<number>(0);
     const navigate = useNavigate();
     const {setLanguage} = useUserContext();
@@ -31,8 +29,8 @@ const Language = () =>{
              
             
              <div className="md:hidden relative w-full h-[100vh] overflow-hidden">
-                 <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-4 gap-2">
-                 <button onClick={()=>{navigate("/country")}}>   <img className="absolute top-0 left-0 m-4" src={left}></img> </button>
+                 <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-2">
+                 <button onClick={()=>{navigate("/country")}}>   <img className="absolute top-0 left-0 m-4" src={left} alt='left'></img> </button>
                  <h1 className="text-xl font-bold text-center font-inter">SELECT LANGUAGE</h1>
                  <div className="w-full ml-4 justify-center mt-4 grid grid-cols-2 gap-6 ">
                         
@@ -60,8 +58,8 @@ const Language = () =>{
                  
                 <h2 className="text-center z-10 text-sm"> <span className="font-bold">NOTE : </span>Once you choose a language, you can change language again from Profile -&gt; Language.</h2>
                 <div className="flex ">
-                    <img className="transform scale-x-[-1]" src={city}></img>
-                    <img className="" src={city}></img>
+                    <img className="transform scale-x-[-1]" src={city} alt='city'></img>
+                    <img className="" src={city} alt='city'></img>
                 </div>
                 
 

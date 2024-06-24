@@ -510,8 +510,8 @@ const PriceList = () => {
   }
   
   return (
-    <div className="h-[80vh] overflow-scroll">
-      <div className='my-28'>
+    <div className="h-fit">
+      <div className='mt-5 mb-24'>
         <div className='my-5'>
           <h2 className='text-2xl font-bold mx-5 my-4'>PAPER</h2>
           <div className='grid grid-cols-3 gap-4 px-3'>
@@ -638,8 +638,8 @@ const PriceList = () => {
             }
           </div>
         </div>
+        <h2 className='text-2xl font-bold text-center mt-10'>PAY AMOUNT FOR THESE SCRAPS</h2>
       </div>
-      <h2 className='text-3xl font-bold text-center'>PAY AMOUNT FOR THESE SCRAPS</h2>
     </div>
   )
 }

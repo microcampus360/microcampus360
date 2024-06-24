@@ -12,10 +12,10 @@ import Language from './components/language';
 import Welcome from './components/welcomePage';
 import State from './components/statePage';
 import District from './components/district';
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from './components/dashboard/Dashboard';
 
 import { UserContextProvider } from './contexts/UserContext';
-import Index from './components/Dashboard/profilepages/Index';
+import Index from './components/dashboard/profilepages/Index';
 
 
 function App() {

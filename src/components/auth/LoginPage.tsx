@@ -2,7 +2,7 @@ import React from 'react'
 import login from '../../assets/LoginPage/login.svg'
 import {SubmitHandler, useForm} from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { useUserContext } from '../../contexts/UserContext';
+// import { useUserContext } from '../../contexts/UserContext';
 interface FormValues {
     email : string;
     password : string;
@@ -13,7 +13,7 @@ const LoginPage = () => {
     const {register, handleSubmit, formState} = useForm<FormValues>();
     const {errors} = formState;
     const navigate = useNavigate();
-    const { country } = useUserContext();
+    // const { country } = useUserContext();
  
     const onSubmit : SubmitHandler<FormValues> = (data) => {
         console.log(data);

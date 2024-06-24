@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import ind from "../../../assets/country/india.png"
+import React, { useState } from "react";
 import city from "../../../assets/country/city.png"
 import { useNavigate } from 'react-router-dom'
 import { useUserContext } from "../../../contexts/UserContext"
@@ -44,7 +43,7 @@ const UpdatedLanguage = () =>{
              
              
               <div className="md:hidden relative w-full h-full overflow-hidden">
-                  <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-4 gap-2">
+                  <div className="px-4 py-12 z-10 w-full flex flex-col justify-center items-center gap-2">
                  
                   <h1 className="text-xl font-bold text-center font-inter">CHANGE LANGUAGE</h1>
                   <div className="w-full ml-4 justify-center mt-4 grid grid-cols-2 gap-6 ">
@@ -92,8 +91,8 @@ const UpdatedLanguage = () =>{
                   
                  <h2 className="text-center z-10 text-sm"> <span className="font-bold">NOTE : </span>Once you choose a language, you can change language again from Profile -&gt; Language.</h2>
                  <div className="flex ">
-                     <img className="transform scale-x-[-1]" src={city}></img>
-                     <img className="" src={city}></img>
+                     <img className="transform scale-x-[-1]" src={city} alt="city"></img>
+                     <img className="" src={city} alt="city"></img>
                  </div>
                  
  

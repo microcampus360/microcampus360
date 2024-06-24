@@ -63,7 +63,7 @@ const Profile = () => {
 
   return (
     <div>
-      <div className='my-28 px-5'>
+      <div className='mt-5 mb-24 px-5'>
         <div className='box1 bg-[#E5EEE9] rounded-xl p-5'>
           <div className='flex justify-between w-full'>
             <div className='flex gap-2'>
